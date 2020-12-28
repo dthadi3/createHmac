@@ -1,3 +1,6 @@
+arch:
+  - amd64
+  - ppc64le
 sudo: false
 language: node_js
 node_js:
@@ -7,6 +10,9 @@ node_js:
 matrix:
   include:
     - node_js: "lts/*"
+      env: TEST_SUITE=standard
+    - node_js: "lts/*"
+      arch: ppc64le
       env: TEST_SUITE=standard
 env:
   - TEST_SUITE=unit
