@@ -3,8 +3,10 @@ arch:
   - ppc64le
 sudo: false
 language: node_js
+#Added node_js version node
 node_js:
   - "lts/*"
+  - "node"
   - "9"
   - "10"
 matrix:
